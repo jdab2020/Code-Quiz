@@ -5,6 +5,7 @@ let showQuestions = document.querySelector("#hidden3");
 // let toggleHR = document.querySelector("#hidden4");
 let toggleRightWrong = document.querySelector("#hidden5")
 let showHighScoresName = document.querySelector("#hidden6");
+let showHighScore = document.querySelector("#hidden7");
 
 // starts timer, shows questions, hides instructions 
 startButton.addEventListener("click", function () {
@@ -19,7 +20,7 @@ let timerStarts = document.querySelector("#countdown");
 let secondsLeft = 100;
 
 function setTime() {
-    showTimer.style.display = "block";
+    showTimer.style.visibility = "visible";
     var timerInterval = setInterval(function () {
         secondsLeft--;
         timerStarts.textContent = "Time: " + secondsLeft;
@@ -36,6 +37,7 @@ function showTheQuestions() {
 
 function showTheHighScoresNameInput() {
     showHighScoresName.style.display = "block";
+    showHighScore.textContent = "High Score: " + score;
 }
 
 let questionToWrite = [
@@ -78,10 +80,11 @@ function writeQuestions() {
         button1.textContent = answerToQuestions[index][1];
         button2.textContent = answerToQuestions[index][2];
         button3.textContent = answerToQuestions[index][3];
+        // toggleRightWrong.textContent = "";
     }
     else {
         showQuestions.style.display = "none";
-        showTimer.style.display = "none";
+        showTimer.style.visibility = "hidden";
         showTheHighScoresNameInput()
     };
  }
