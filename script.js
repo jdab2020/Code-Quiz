@@ -2,7 +2,6 @@ let startButton = document.querySelector("#start_button");
 let showTimer = document.querySelector("#hidden1");
 let hideInstructions = document.querySelector("#hidden2");
 let showQuestions = document.querySelector("#hidden3");
-// let toggleHR = document.querySelector("#hidden4");
 let toggleRightWrong = document.querySelector("#hidden5")
 let showHighScoresName = document.querySelector("#hidden6");
 let showHighScore = document.querySelector("#hidden7");
@@ -25,6 +24,12 @@ function setTime() {
         secondsLeft--;
         timerStarts.textContent = "Time: " + secondsLeft;
     }, 1000);
+    // if (secondsLeft === 0) {
+    //     clearInterval(timerInterval);
+    //     showQuestions.style.display = "none";
+    //     showTimer.style.visibility = "hidden";
+    //     showTheHighScoresNameInput()
+    // }
 };
 
 function hideTheInstructions() {
@@ -87,7 +92,7 @@ function writeQuestions() {
         showTimer.style.visibility = "hidden";
         showTheHighScoresNameInput()
     };
- }
+}
 
 // Removed the button click event handlers out of function 
 button0.addEventListener("click", function (event) {
@@ -98,7 +103,7 @@ button0.addEventListener("click", function (event) {
     }
     else {
         toggleRightWrong.textContent = "Wrong";
-        secondsLeft = secondsLeft-10;
+        secondsLeft = secondsLeft - 10;
     };
     index++
     console.log(toggleRightWrong.textContent);
@@ -114,7 +119,7 @@ button1.addEventListener("click", function (event) {
     }
     else {
         toggleRightWrong.textContent = "Wrong";
-        secondsLeft = secondsLeft-10;
+        secondsLeft = secondsLeft - 10;
     };
     index++
     console.log(toggleRightWrong.textContent);
@@ -129,7 +134,7 @@ button2.addEventListener("click", function (event) {
     }
     else {
         toggleRightWrong.textContent = "Wrong";
-        secondsLeft = secondsLeft-10;
+        secondsLeft = secondsLeft - 10;
     };
     index++
     console.log(toggleRightWrong.textContent);
@@ -145,7 +150,7 @@ button3.addEventListener("click", function (event) {
     }
     else {
         toggleRightWrong.textContent = "Wrong";
-        secondsLeft = secondsLeft-10;
+        secondsLeft = secondsLeft - 10;
 
     };
     index++

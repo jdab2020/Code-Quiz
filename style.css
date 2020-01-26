@@ -3,6 +3,7 @@
 }
 #start_button{
     text-align: center;
+    align-content: center;
 }
 #hidden1{
     visibility: hidden;
