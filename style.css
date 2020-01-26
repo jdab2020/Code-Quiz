@@ -2,10 +2,6 @@
     box-sizing: border-box;
 }
 
-#hidden{
-    visibility: hidden;
-}
-
 #hidden1{
     display: none;
     position: relative;
@@ -21,7 +17,15 @@
     position: relative;
 }
 
-#hidden4{
+#hidden6{
     display: none;
     position: relative;
+}
+
+#hidden4 {
+    visibility: hidden;
+}
+
+#hidden5 {
+    visibility: hidden;
 }
