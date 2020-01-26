@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Code Quiz</title>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="style.css">
+        <style>  </style>
+    </head>  
+    
+    <body>
+        <div>
+            <div id="hidden1" > <!--Hidden until button pressed-->
+                <button  align="left">High Scores - left side </button>
+                <div id="countdown" align="right"></div>
+            </div>
+
+            <div id="hidden2"> <!--Will be hide once start button pressed-->
+                <h1 align = "center">Coding Quiz Challenge</h1>
+                <h2 align = "center">Instructions</h2>
+                <button id="start_button">Start Quiz</button>  
+            </div>
+              
+            <div id = "hidden3"> <!--Hidden until button pressed-->
+                <h3 id = "question">Questions</h3>
+                <button id="ans0">1</button>
+                <button id="ans1">2</button>
+                <button id="ans2">3</button>
+                <button id="ans3">3</button>
+                <hr class="hidden"> <!-- hidden until asnwered -->
+                <p class="hidden">Right or wrong</p> <!-- hidden until asnwered -->
+            </div>
+            
+            <div id = "hidden4"> <!--Hidden until end-->
+                <h4>High Scores input</h4>
+                <button id="submitHighScoreName">Submit</button>
+            </div>
+        </div>     
+    <script src="script.js"></script>
+    </body>
+</html>

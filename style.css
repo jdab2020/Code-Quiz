@@ -1,0 +1,15 @@
+* {
+    box-sizing: border-box;
+}
+
+#hidden1{
+    display: none;
+}
+
+#hidden2{
+    display: block;
+}
+
+#hidden3{
+    display: none;
+}
