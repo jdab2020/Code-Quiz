@@ -2,14 +2,26 @@
     box-sizing: border-box;
 }
 
+#hidden{
+    visibility: hidden;
+}
+
 #hidden1{
     display: none;
+    position: relative;
 }
 
 #hidden2{
     display: block;
+    position: relative;
 }
 
 #hidden3{
     display: none;
+    position: relative;
+}
+
+#hidden4{
+    display: none;
+    position: relative;
 }
