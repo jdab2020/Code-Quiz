@@ -39,7 +39,7 @@ function showTheHighScoresNameInput() {
 }
 
 function togglingHR() {
-//    toggleHR.style.visibility = "visible";
+    //    toggleHR.style.visibility = "visible";
     if (toggleHR.style.visibility === "hidden") {
         toggleHR.style.visibility = "visible";
     }
@@ -48,7 +48,7 @@ function togglingHR() {
 }
 
 function togglingRightWrong() {
-//    toggleRightWrong.style.visibility = "visible";
+    //    toggleRightWrong.style.visibility = "visible";
     if (toggleRightWrong.style.visibility === "hidden") {
         toggleRightWrong.style.visibility = "visible";
     }
@@ -111,6 +111,15 @@ let index = 0;
 // New bug... shows first question then second then skips to fourth then skips to seventh
 // Toggling the horizontal line and right or wrong answer doesn't work
 function writeQuestions() {
+    // setTimeout(() => {
+        
+    // }, 2000);
+    // if (toggleRightWrong.style.visibility === "visible") {
+    //     toggleRightWrong.style.visibility = "hidden";
+    // };
+    // if (toggleHR.style.visibility === "visible") {
+    //     toggleHR.style.visibility = "hidden";
+    // };
     if (index < questionToWrite.length) {
         quest.textContent = questionToWrite[index];
         button0.textContent = answerToQuestions[index][0];
@@ -127,22 +136,29 @@ function writeQuestions() {
         showQuestions.style.display = "none";
         showTimer.style.display = "none";
         showTheHighScoresNameInput()
-    }
-}
+    };
+    // toggleHR.style.visibility = "hidden";
+    // toggleRightWrong.style.visibility = "hidden";
+    // console.log(toggleHR.style.visibility);
+    // console.log(toggleRightWrong.style.visibility);
+ }
 
 // Removed the button click event handlers out of function 
 button0.addEventListener("click", function (event) {
     event.preventDefault();
     if (button0.textContent === answerToQuestions[index][rightAnswersIdx[index]]) {
-        toggleRightWrong.textContent = "Correct"
+        toggleRightWrong.textContent = "Correct";
         togglingHR();
         togglingRightWrong();
     }
     else {
-        toggleRightWrong.textContent = "Wrong"
+        toggleRightWrong.textContent = "Wrong";
         togglingHR();
         togglingRightWrong();
-    }
+    };
+    // if (toggleRightWrong.style.visibility === "hidden") {
+    //     toggleRightWrong.style.visibility = "visible";
+    // };
     index++
     console.log(toggleHR.style.visibility);
     console.log(toggleRightWrong.style.visibility);
@@ -157,15 +173,18 @@ button0.addEventListener("click", function (event) {
 button1.addEventListener("click", function (event) {
     event.preventDefault();
     if (button1.textContent === answerToQuestions[index][rightAnswersIdx[index]]) {
-        toggleRightWrong.textContent = "Correct"
+        toggleRightWrong.textContent = "Correct";
         togglingHR();
         togglingRightWrong();
     }
     else {
-        toggleRightWrong.textContent = "Wrong"
+        toggleRightWrong.textContent = "Wrong";
         togglingHR();
         togglingRightWrong();
-    }
+    };
+    // if (toggleRightWrong.style.visibility === "hidden") {
+    //     toggleRightWrong.style.visibility = "visible";
+    // };
     index++
     console.log(toggleHR.style.visibility);
     console.log(toggleRightWrong.style.visibility);
@@ -179,15 +198,18 @@ button1.addEventListener("click", function (event) {
 button2.addEventListener("click", function (event) {
     event.preventDefault();
     if (button2.textContent === answerToQuestions[index][rightAnswersIdx[index]]) {
-        toggleRightWrong.textContent = "Correct"
+        toggleRightWrong.textContent = "Correct";
         togglingHR();
         togglingRightWrong();
     }
     else {
-        toggleRightWrong.textContent = "Wrong"
+        toggleRightWrong.textContent = "Wrong";
         togglingHR();
         togglingRightWrong();
-    }
+    };
+    // if (toggleRightWrong.style.visibility === "hidden") {
+    //     toggleRightWrong.style.visibility = "visible";
+    // };
     index++
     console.log(toggleHR.style.visibility);
     console.log(toggleRightWrong.style.visibility);
@@ -202,15 +224,18 @@ button2.addEventListener("click", function (event) {
 button3.addEventListener("click", function (event) {
     event.preventDefault();
     if (button3.textContent === answerToQuestions[index][rightAnswersIdx[index]]) {
-        toggleRightWrong.textContent = "Correct"
+        toggleRightWrong.textContent = "Correct";
         togglingHR();
         togglingRightWrong();
     }
     else {
-        toggleRightWrong.textContent = "Wrong"
+        toggleRightWrong.textContent = "Wrong";
         togglingHR();
         togglingRightWrong();
-    }
+    };
+    // if (toggleRightWrong.style.visibility === "hidden") {
+    //     toggleRightWrong.style.visibility = "visible";
+    // };
     index++
     console.log(toggleHR.style.visibility);
     console.log(toggleRightWrong.style.visibility);
@@ -220,7 +245,4 @@ button3.addEventListener("click", function (event) {
     console.log(toggleHR.style.visibility);
     console.log(toggleRightWrong.style.visibility);
     writeQuestions();
-
 });
-
-
