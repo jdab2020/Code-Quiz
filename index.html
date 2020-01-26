@@ -1,46 +1,62 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <title>Code Quiz</title>
-        <meta charset="utf-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <link rel="stylesheet" href="style.css">
-        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
-        <style>  </style>
-    </head>  
-    
-    <body>
-        <div class="container">
-            <div id="hidden1" > <!--Hidden until button pressed-->
-                <button  align="left">High Scores - left side </button>
-                <div id="countdown" class="float-right"></div>
+
+<head>
+    <title>Code Quiz</title>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+        integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <style> </style>
+</head>
+
+<body>
+    <div class="container">
+        <div>
+            <div id="hidden1" class="row">
+                <!--Hidden until button pressed-->
+                <button class="col-md-4">High Scores</button>
+                <div id="countdown" class="float-md-right col-sm-2"></div>
             </div>
 
-            <div id="hidden2"> <!--Will be hide once start button pressed-->
-                <h1 align = "center">Coding Quiz Challenge</h1>
-                <h2 align = "center">Instructions</h2>
-                <button id="start_button">Start Quiz</button>  
+            <div id="hidden2" class="row">
+                <!--Will be hide once start button pressed-->
+                <h1 align="center">Coding Quiz Challenge</h1>
+                <h2 align="center">Instructions</h2>
+                <button id="start_button" class="align-middle">Start Quiz</button>
             </div>
-              
-            <div id="hidden3"> <!--Hidden until button pressed-->
-                <h3 id="question">Questions</h3>
-                <button id="ans0"></button>
-                <button id="ans1"></button>
-                <button id="ans2"></button>
-                <button id="ans3"></button>
-                <hr id="hidden4"> <!-- hidden until asnwered -->
-                <p id="hidden5">Right or wrong</p> <!-- hidden until asnwered -->
+
+            <div id="hidden3" class="row">
+                <!--Hidden until button pressed-->
+                <h3 id="question" align="center">Questions</h3>
+                <button id="ans0" class="col-md-6 col-xl-12"></button>
+                <button id="ans1" class="col-md-6 col-xl-12"></button>
+                <button id="ans2" class="col-md-6 col-xl-12"></button>
+                <button id="ans3" class="col-md-6 col-xl-12"></button>
+                <hr>
+                <p id="hidden5" class="col"></p>
             </div>
-            
-            <div id="hidden6"> <!--Hidden until end-->
+
+            <div id="hidden6">
+                <!--Hidden until end-->
                 <h4>High Scores input</h4>
                 <button id="submitHighScoreName">Submit</button>
             </div>
-        </div>     
+        </div>
+
+    </div>
     <script src="script.js"></script>
-    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
-    </body>
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
+        integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+        integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
+        integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
+        crossorigin="anonymous"></script>
+</body>
+
 </html>
