@@ -24,8 +24,10 @@
 
 #hidden4 {
     visibility: hidden;
+    position: relative;
 }
 
 #hidden5 {
     visibility: hidden;
+    position: relative;
 }

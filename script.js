@@ -39,7 +39,8 @@ function showTheHighScoresNameInput() {
 }
 
 function togglingHR() {
-    if (toggleHR === "hidden") {
+//    toggleHR.style.visibility = "visible";
+    if (toggleHR.style.visibility === "hidden") {
         toggleHR.style.visibility = "visible";
     }
     else
@@ -47,11 +48,12 @@ function togglingHR() {
 }
 
 function togglingRightWrong() {
-    if (toggleRightWrong === "hidden") {
-        toggleRightWrong = "visible";
+//    toggleRightWrong.style.visibility = "visible";
+    if (toggleRightWrong.style.visibility === "hidden") {
+        toggleRightWrong.style.visibility = "visible";
     }
     else
-        toggleRightWrong = "hidden";
+        toggleRightWrong.style.visibility = "hidden";
 }
 
 // let questionAnswers = {
@@ -115,84 +117,110 @@ function writeQuestions() {
         button1.textContent = answerToQuestions[index][1];
         button2.textContent = answerToQuestions[index][2];
         button3.textContent = answerToQuestions[index][3];
-        console.log(quest.textContent);
-        console.log(button0.textContent);
-        console.log(button1.textContent);
-        console.log(button2.textContent);
-        console.log(button3.textContent);
-        userAnswers();
+        // console.log(quest.textContent);
+        // console.log(button0.textContent);
+        // console.log(button1.textContent);
+        // console.log(button2.textContent);
+        // console.log(button3.textContent);
     }
-    
+    else {
+        showQuestions.style.display = "none";
+        showTimer.style.display = "none";
+        showTheHighScoresNameInput()
+    }
 }
 
-function userAnswers() {
-    button0.addEventListener("click", function (event) {
-        event.preventDefault();
-        if (button0.value === answerToQuestions[index][rightAnswersIdx[index]]) {
-            toggleRightWrong.textContent = "Correct"
-            togglingHR();
-            togglingRightWrong();
-            index++
-        }
-        else {
-            toggleRightWrong.textContent = "Wrong"
-            togglingHR();
-            togglingRightWrong();
-            index++
-        }
+// Removed the button click event handlers out of function 
+button0.addEventListener("click", function (event) {
+    event.preventDefault();
+    if (button0.textContent === answerToQuestions[index][rightAnswersIdx[index]]) {
+        toggleRightWrong.textContent = "Correct"
+        togglingHR();
+        togglingRightWrong();
+    }
+    else {
+        toggleRightWrong.textContent = "Wrong"
+        togglingHR();
+        togglingRightWrong();
+    }
+    index++
+    console.log(toggleHR.style.visibility);
+    console.log(toggleRightWrong.style.visibility);
+    console.log(toggleRightWrong.textContent);
+    togglingHR();
+    togglingRightWrong();
+    console.log(toggleHR.style.visibility);
+    console.log(toggleRightWrong.style.visibility);
+    writeQuestions();
 
-        writeQuestions();
-    });
-    button1.addEventListener("click", function (event) {
-        event.preventDefault();
-        if (button1.value === answerToQuestions[index][rightAnswersIdx[index]]) {
-            toggleRightWrong.textContent = "Correct"
-            togglingHR();
-            togglingRightWrong();
-            index++
-        }
-        else {
-            toggleRightWrong.textContent = "Wrong"
-            togglingHR();
-            togglingRightWrong();
-            index++
-        }
+});
+button1.addEventListener("click", function (event) {
+    event.preventDefault();
+    if (button1.textContent === answerToQuestions[index][rightAnswersIdx[index]]) {
+        toggleRightWrong.textContent = "Correct"
+        togglingHR();
+        togglingRightWrong();
+    }
+    else {
+        toggleRightWrong.textContent = "Wrong"
+        togglingHR();
+        togglingRightWrong();
+    }
+    index++
+    console.log(toggleHR.style.visibility);
+    console.log(toggleRightWrong.style.visibility);
+    console.log(toggleRightWrong.textContent);
+    togglingHR();
+    togglingRightWrong();
+    console.log(toggleHR.style.visibility);
+    console.log(toggleRightWrong.style.visibility);
+    writeQuestions();
+});
+button2.addEventListener("click", function (event) {
+    event.preventDefault();
+    if (button2.textContent === answerToQuestions[index][rightAnswersIdx[index]]) {
+        toggleRightWrong.textContent = "Correct"
+        togglingHR();
+        togglingRightWrong();
+    }
+    else {
+        toggleRightWrong.textContent = "Wrong"
+        togglingHR();
+        togglingRightWrong();
+    }
+    index++
+    console.log(toggleHR.style.visibility);
+    console.log(toggleRightWrong.style.visibility);
+    console.log(toggleRightWrong.textContent);
+    togglingHR();
+    togglingRightWrong();
+    console.log(toggleHR.style.visibility);
+    console.log(toggleRightWrong.style.visibility);
+    writeQuestions();
 
-        writeQuestions();
-    });
-    button2.addEventListener("click", function (event) {
-        event.preventDefault();
-        if (button2.value === answerToQuestions[index][rightAnswersIdx[index]]) {
-            toggleRightWrong.textContent = "Correct"
-            togglingHR();
-            togglingRightWrong();
-            index++
-        }
-        else {
-            toggleRightWrong.textContent = "Wrong"
-            togglingHR();
-            togglingRightWrong();
-            index++
-        }
+});
+button3.addEventListener("click", function (event) {
+    event.preventDefault();
+    if (button3.textContent === answerToQuestions[index][rightAnswersIdx[index]]) {
+        toggleRightWrong.textContent = "Correct"
+        togglingHR();
+        togglingRightWrong();
+    }
+    else {
+        toggleRightWrong.textContent = "Wrong"
+        togglingHR();
+        togglingRightWrong();
+    }
+    index++
+    console.log(toggleHR.style.visibility);
+    console.log(toggleRightWrong.style.visibility);
+    console.log(toggleRightWrong.textContent);
+    togglingHR();
+    togglingRightWrong();
+    console.log(toggleHR.style.visibility);
+    console.log(toggleRightWrong.style.visibility);
+    writeQuestions();
 
-        writeQuestions();
-    });
-    button3.addEventListener("click", function (event) {
-        event.preventDefault();
-        if (button3.value === answerToQuestions[index][rightAnswersIdx[index]]) {
-            toggleRightWrong.textContent = "Correct"
-            togglingHR();
-            togglingRightWrong();
-            index++
-        }
-        else {
-            toggleRightWrong.textContent = "Wrong"
-            togglingHR();
-            togglingRightWrong();
-            index++
-        }
+});
 
-        writeQuestions();
-    });
 
-}
