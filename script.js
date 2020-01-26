@@ -92,15 +92,15 @@ button0.addEventListener("click", function (event) {
     if (button0.textContent === answerToQuestions[index][rightAnswersIdx[index]]) {
         toggleRightWrong.textContent = "Correct";
         score++
-        console.log(toggleRightWrong.textContent);
-        console.log(toggleRightWrong.style.visibility)
     }
     else {
         toggleRightWrong.textContent = "Wrong";
         secondsLeft = secondsLeft-10;
     };
     index++
-    // writeQuestions();
+    console.log(toggleRightWrong.textContent);
+    console.log(toggleRightWrong.style.visibility)
+    writeQuestions();
 
 });
 button1.addEventListener("click", function (event) {
@@ -114,7 +114,9 @@ button1.addEventListener("click", function (event) {
         secondsLeft = secondsLeft-10;
     };
     index++
-    // writeQuestions();
+    console.log(toggleRightWrong.textContent);
+    console.log(toggleRightWrong.style.visibility)
+    writeQuestions();
 });
 button2.addEventListener("click", function (event) {
     event.preventDefault();
@@ -127,7 +129,9 @@ button2.addEventListener("click", function (event) {
         secondsLeft = secondsLeft-10;
     };
     index++
-    // writeQuestions();
+    console.log(toggleRightWrong.textContent);
+    console.log(toggleRightWrong.style.visibility)
+    writeQuestions();
 
 });
 button3.addEventListener("click", function (event) {
@@ -142,5 +146,7 @@ button3.addEventListener("click", function (event) {
 
     };
     index++
-    // writeQuestions();
+    console.log(toggleRightWrong.textContent);
+    console.log(toggleRightWrong.style.visibility)
+    writeQuestions();
 });
