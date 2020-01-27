@@ -21,30 +21,32 @@ startButton.addEventListener("click", function () {
 });
 
 let timerStarts = document.querySelector("#countdown");
-let secondsLeft = 100;
+let secondsLeft = 60;
 
+// Sets time and stops quiz when reaches 0
 function setTime() {
     showTimer.style.visibility = "visible";
     var timerInterval = setInterval(function () {
         secondsLeft--;
         timerStarts.textContent = "Time: " + secondsLeft;
-    }, 1000);
-    // Should stop quiz when reaches zero but doesn't seem to work
-    if (secondsLeft === 0) {
-        clearInterval(timerInterval);
-        showTimer.style.visibility = "hidden";
-        showTheHighScoresNameInput()
-    }
-};
 
+        if (secondsLeft === 0) {
+            clearInterval(timerInterval);
+            showTimer.style.visibility = "hidden";
+            showQuestions.style.display = "none";
+            showTheHighScoresNameInput();
+        }
+    }, 1000);
+};
+// Hides the instruction
 function hideTheInstructions() {
     hideInstructions.style.display = "none";
 }
-
+// Shows the questions
 function showTheQuestions() {
     showQuestions.style.display = "block";
 }
-
+// Shows the high scores and asks for name block
 function showTheHighScoresNameInput() {
     showHighScoresName.style.display = "block";
     showHighScore.textContent = "High Score: " + score;
@@ -69,7 +71,7 @@ let answerToQuestions = [
     ["ans", "answer", "ans", "ans"],
     ["answer", "ans", "ans", "ans"],
 ];
-
+// index of right answers 
 let rightAnswersIdx = [0, 1, 2, 3, 2, 1, 0];
 let quest = document.querySelector("#question");
 
@@ -171,12 +173,3 @@ highScoreNameSubmit.addEventListener("click", function () {
     listOfHighScores.style.display = "block";
     listTheName.textContent = userName.value + " - " + score;
 })
-
-// this too doesn't work
-// function checkTimer() {
-//     if (secondsLeft === 0) {
-//         showQuestions.style.display = "none";
-//         showTimer.style.visibility = "hidden";
-//         showTheHighScoresNameInput()
-//     }
-// }

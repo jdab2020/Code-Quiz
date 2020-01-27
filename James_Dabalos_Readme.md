@@ -14,6 +14,4 @@ Create a timed quiz
         * 'Input' appears that asks for initials
         * Then name with score replaces prompt
     
-    ** When timer goes 0, quiz ends
-        ** As of creation of this readme file, I haven't gotten a fix to it (will update this readme later)
     
