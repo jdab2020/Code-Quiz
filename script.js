@@ -106,11 +106,11 @@ function writeQuestions() {
 button0.addEventListener("click", function (event) {
     event.preventDefault();
     if (button0.textContent === answerToQuestions[index][rightAnswersIdx[index]]) {
-        toggleRightWrong.textContent = "Correct";
+        toggleRightWrong.textContent = "Previous answer is correct";
         score++
     }
     else {
-        toggleRightWrong.textContent = "Wrong";
+        toggleRightWrong.textContent = "Previous answer is Wrong";
         secondsLeft = secondsLeft - 10;
     };
     index++
@@ -122,11 +122,11 @@ button0.addEventListener("click", function (event) {
 button1.addEventListener("click", function (event) {
     event.preventDefault();
     if (button1.textContent === answerToQuestions[index][rightAnswersIdx[index]]) {
-        toggleRightWrong.textContent = "Correct";
+        toggleRightWrong.textContent = "Previous answer is correct";
         score++
     }
     else {
-        toggleRightWrong.textContent = "Wrong";
+        toggleRightWrong.textContent = "Previous answer is wrong";
         secondsLeft = secondsLeft - 10;
     };
     index++
@@ -137,11 +137,11 @@ button1.addEventListener("click", function (event) {
 button2.addEventListener("click", function (event) {
     event.preventDefault();
     if (button2.textContent === answerToQuestions[index][rightAnswersIdx[index]]) {
-        toggleRightWrong.textContent = "Correct";
+        toggleRightWrong.textContent = "Previous answer is correct";
         score++
     }
     else {
-        toggleRightWrong.textContent = "Wrong";
+        toggleRightWrong.textContent = "Previous answer is wrong";
         secondsLeft = secondsLeft - 10;
     };
     index++
@@ -153,11 +153,11 @@ button2.addEventListener("click", function (event) {
 button3.addEventListener("click", function (event) {
     event.preventDefault();
     if (button3.textContent === answerToQuestions[index][rightAnswersIdx[index]]) {
-        toggleRightWrong.textContent = "Correct";
+        toggleRightWrong.textContent = "Previous answer is correct";
         score++
     }
     else {
-        toggleRightWrong.textContent = "Wrong";
+        toggleRightWrong.textContent = "Previous answer is wrong";
         secondsLeft = secondsLeft - 10;
 
     };
