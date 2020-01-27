@@ -5,6 +5,11 @@ let showQuestions = document.querySelector("#hidden3");
 let toggleRightWrong = document.querySelector("#hidden5")
 let showHighScoresName = document.querySelector("#hidden6");
 let showHighScore = document.querySelector("#hidden7");
+let highScoreNameSubmit = document.querySelector("#submitHighScoreName");
+let listOfHighScores = document.querySelector("#hidden8");
+let listTheName = document.querySelector("#inputName");
+let userName = document.querySelector("#name");
+
 
 // starts timer, shows questions, hides instructions 
 startButton.addEventListener("click", function () {
@@ -24,6 +29,7 @@ function setTime() {
         secondsLeft--;
         timerStarts.textContent = "Time: " + secondsLeft;
     }, 1000);
+    // Should stop quiz when reaches zero but doesn't seem to work
     // if (secondsLeft === 0) {
     //     clearInterval(timerInterval);
     //     showQuestions.style.display = "none";
@@ -43,6 +49,7 @@ function showTheQuestions() {
 function showTheHighScoresNameInput() {
     showHighScoresName.style.display = "block";
     showHighScore.textContent = "High Score: " + score;
+
 }
 
 let questionToWrite = [
@@ -77,7 +84,7 @@ let score = 0;
 // Had a for loop inside the function but wouldn't wait for eventListener before each iteration
 // New bug... shows first question then second then skips to fourth then skips to seventh
 // Toggling the horizontal line and right or wrong answer doesn't work
-// Removed toggling - going to replace it something else...
+// Removed toggling - settling with re-writing right or wrong - it doesn't disappear when new questions are shown
 function writeQuestions() {
     if (index < questionToWrite.length && secondsLeft > 0) {
         quest.textContent = questionToWrite[index];
@@ -158,3 +165,9 @@ button3.addEventListener("click", function (event) {
     console.log(toggleRightWrong.style.visibility)
     writeQuestions();
 });
+
+highScoreNameSubmit.addEventListener("click", function(){
+    showHighScoresName.style.display = "none";
+    listOfHighScores.style.display = "block";
+    listTheName.textContent = userName.value + " - " + score;
+})
