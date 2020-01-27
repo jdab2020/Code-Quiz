@@ -30,12 +30,12 @@ function setTime() {
         timerStarts.textContent = "Time: " + secondsLeft;
     }, 1000);
     // Should stop quiz when reaches zero but doesn't seem to work
-    // if (secondsLeft === 0) {
-    //     clearInterval(timerInterval);
-    //     showQuestions.style.display = "none";
-    //     showTimer.style.visibility = "hidden";
-    //     showTheHighScoresNameInput()
-    // }
+    if (secondsLeft === 0) {
+        clearInterval(timerInterval);
+        showQuestions.style.display = "none";
+        showTimer.style.visibility = "hidden";
+        showTheHighScoresNameInput()
+    }
 };
 
 function hideTheInstructions() {
@@ -85,6 +85,7 @@ let score = 0;
 // New bug... shows first question then second then skips to fourth then skips to seventh
 // Toggling the horizontal line and right or wrong answer doesn't work
 // Removed toggling - settling with re-writing right or wrong - it doesn't disappear when new questions are shown
+
 function writeQuestions() {
     if (index < questionToWrite.length && secondsLeft > 0) {
         quest.textContent = questionToWrite[index];
@@ -166,8 +167,17 @@ button3.addEventListener("click", function (event) {
     writeQuestions();
 });
 
-highScoreNameSubmit.addEventListener("click", function(){
+highScoreNameSubmit.addEventListener("click", function () {
     showHighScoresName.style.display = "none";
     listOfHighScores.style.display = "block";
     listTheName.textContent = userName.value + " - " + score;
 })
+
+// this too doesn't work
+// function checkTimer() {
+//     if (secondsLeft === 0) {
+//         showQuestions.style.display = "none";
+//         showTimer.style.visibility = "hidden";
+//         showTheHighScoresNameInput()
+//     }
+// }
