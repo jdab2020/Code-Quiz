@@ -12,31 +12,31 @@
     <style> </style>
 </head>
 
-<body>
-    <div class="container">
+<body class="bg-secondary">
+    <div class="container bg-secondary">
         <div>
-            <div id="hidden1" class="row">
+            <div id="hidden1" class="row mt-1">
                 <!--Hidden until button pressed-->
-                <button class="col-md-4">High Scores</button>
-                <div id="countdown" class="float-md-right col-sm-2"></div>
+                <button class="btn btn-dark col-md-4">High Scores</button>
+                <div id="countdown" class="text-light mx-auto my-auto float-md-right col-sm-2"></div>
             </div>
 
             <div id="hidden2" class="row">
-                <!--Will be hide once start button pressed-->
-                <h1 align="center">Coding Quiz Challenge</h1>
-                <h2 align="center">Instructions</h2>
-                <button id="start_button" class="col-md-4">Start Quiz</button>
+                <!--Will hide once start button pressed-->
+                <h1 align="center" class="text-info">Coding Quiz Challenge</h1>
+                <h2 align="center" class="text-info">Instructions</h2>
+                <button id="start_button" class="btn btn-dark col-md-4">Start Quiz</button>
             </div>
 
             <div id="hidden3" class="row">
                 <!--Hidden until button pressed-->
-                <h3 id="question" align="center">Questions</h3>
-                <button id="ans0" class="col-md-6 col-xl-8"></button>
-                <button id="ans1" class="col-md-6 col-xl-8"></button>
-                <button id="ans2" class="col-md-6 col-xl-8"></button>
-                <button id="ans3" class="col-md-6 col-xl-8"></button>
+                <h3 id="question" align="center" class="text-light mx-auto my-auto">Questions</h3>
+                <button id="ans0" class="btn btn-dark my-1 col-md-6 col-xl-8"></button>
+                <button id="ans1" class="btn btn-dark my-1 col-md-6 col-xl-8"></button>
+                <button id="ans2" class="btn btn-dark my-1 col-md-6 col-xl-8"></button>
+                <button id="ans3" class="btn btn-dark my-1 col-md-6 col-xl-8"></button>
                 <hr>
-                <div id="hidden5" class="col-md-6 col-xl-8"></div>
+                <div id="hidden5" class="col-md-6 col-xl-8 text-muted"></div>
             </div>
 
             <div id="hidden6" class="row">
@@ -44,8 +44,8 @@
                     <!--Hidden until end-->
                     <h3>Quiz Done!</h3>
                     <h4 id="hidden7" class="py-1"></h4>
-                    <h5>Enter your Name or Initials here: <input type="text" id="name" placeholder="Your Name" />
-                        <button id="submitHighScoreName">Submit</button></h5>
+                    <h5>Enter your Name or Initials here: <input type="text" class="bg-light mx-auto px-auto py-auto my-auto "id="name" placeholder="Your Name" />
+                        <button id="submitHighScoreName" class="mx-auto px-auto py-auto px-auto btn btn-dark">Submit</button></h5>
                 </div>
             </div>
 

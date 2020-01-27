@@ -32,7 +32,6 @@ function setTime() {
     // Should stop quiz when reaches zero but doesn't seem to work
     if (secondsLeft === 0) {
         clearInterval(timerInterval);
-        showQuestions.style.display = "none";
         showTimer.style.visibility = "hidden";
         showTheHighScoresNameInput()
     }
@@ -51,7 +50,7 @@ function showTheHighScoresNameInput() {
     showHighScore.textContent = "High Score: " + score;
 
 }
-
+// Was trying to use object but unsuccessful - at previous commits
 let questionToWrite = [
     "This_is_question_1",
     "This_is_question_2",
@@ -110,7 +109,7 @@ button0.addEventListener("click", function (event) {
         score++
     }
     else {
-        toggleRightWrong.textContent = "Previous answer is Wrong";
+        toggleRightWrong.textContent = "Previous answer is wrong";
         secondsLeft = secondsLeft - 10;
     };
     index++
