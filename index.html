@@ -12,49 +12,51 @@
     <style> </style>
 </head>
 
-<body class="bg-secondary">
-    <div class="container bg-secondary">
+<body style=background-color:purple>
+    <div class="container">
         <div>
             <div id="hidden1" class="row mt-1">
                 <!--Hidden until button pressed-->
-                <button class="btn btn-outline-light btn-dark col-md-4">High Scores</button>
-                <div id="countdown" class="text-light mx-auto my-auto float-md-right col-sm-2"></div>
+                <button class="btn btn-outline-light text-warning btn-dark col-md-4">High Scores</button>
+                <div id="countdown" class="text-warning mx-auto my-auto float-md-right col-sm-2"></div>
             </div>
 
             <div id="hidden2" class="row">
                 <!--Will hide once start button pressed-->
-                <h1 align="center" class="text-info">Coding Quiz Challenge</h1>
-                <h2 align="center" class="text-info">Instructions</h2>
-                <button id="start_button" class="btn btn-outline-light btn-dark col-md-4">Start Quiz</button>
+                <h1 align="center" class="text-warning">Remembering Kobe Bryant</h1>
+                <h2 align="center" class="text-warning">8 | 24</h2>
+                <h3 align="center" class="text-light">I don't want to be the next Michael Jordan, I only want to be Kobe Bryant.</h3>
+                <button id="start_button" class="btn text-warning btn-outline-light btn-dark col-md-4">Start Quiz</button>
             </div>
 
             <div id="hidden3" class="row">
                 <!--Hidden until button pressed-->
-                <h3 id="question" align="center" class="text-light mx-auto my-2 py-2">Questions</h3>
-                <button id="ans0" class="btn btn-dark my-1 col-md-6 col-xl-8"></button>
-                <button id="ans1" class="btn btn-dark my-1 col-md-6 col-xl-8"></button>
-                <button id="ans2" class="btn btn-dark my-1 col-md-6 col-xl-8"></button>
-                <button id="ans3" class="btn btn-dark my-1 col-md-6 col-xl-8"></button>
+                <h3 id="question" align="center" class="text-warning mx-auto my-2 py-2">Questions</h3>
+                <button id="ans0" class="btn text-warning btn-dark my-1 col-md-6 col-xl-8"></button>
+                <button id="ans1" class="btn text-warning btn-dark my-1 col-md-6 col-xl-8"></button>
+                <button id="ans2" class="btn text-warning btn-dark my-1 col-md-6 col-xl-8"></button>
+                <button id="ans3" class="btn text-warning btn-dark my-1 col-md-6 col-xl-8"></button>
                 <hr>
-                <div id="hidden5" class="col-md-6 col-xl-8 text-light"></div>
+                <div id="hidden5" class="col-md-6 col-xl-8 text-warning"></div>
             </div>
 
             <div id="hidden6" class="row">
                 <div class="col">
                     <!--Hidden until end-->
-                    <h3 align="center">Quiz Done!</h3>
-                    <h4 align="center" id="hidden7" class="py-1"></h4>
-                    <h5 align="center">Enter your Name or Initials here: <input type="text"
+                    <h3 align="center" class="text-warning">Quiz Done!</h3>
+                    <h4 align="center" class="text-warning" id="hidden7" class="py-1"></h4>
+                    <h5 align="center" class="text-warning">Enter your Name or Initials here: <input type="text"
                             width="30px" class="bg-light mx-auto px-auto py-auto my-auto " id="name" placeholder="Your Name" />
                         <button id="submitHighScoreName"
-                            class="mx-auto px-auto py-auto px-auto btn btn-outline-light btn-dark">Submit</button></h5>
+                            class="text-warning mx-auto px-auto py-auto px-auto btn btn-outline-light btn-dark">Submit</button></h5>
                 </div>
             </div>
 
             <div id="hidden8" class="row"> <!--hidden until end-->
-                <div class="col">
-                    <h5 align="center">High Scores</h5>
-                    <h6 align="center" id="inputName"></h6>
+                <div class="col-12">
+                    <h1 align="center" class="text-warning">High Scores</h1>
+                    <h2 align="center" class="text-warning" id="inputName"></h2>
+                    <img class="col-12" src="https://d2hhj3gz5jljkm.cloudfront.net/54d/9aefc/921c/4360/893f/a3c67ee252ee/original/4134688.jpg">               
                 </div>
             </div>
         </div>

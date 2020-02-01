@@ -22,11 +22,11 @@ startButton.addEventListener("click", function () {
 
 let timerStarts = document.querySelector("#countdown");
 let secondsLeft = 60;
-
+let timerInterval;
 // Sets time and stops quiz when reaches 0
 function setTime() {
     showTimer.style.visibility = "visible";
-    var timerInterval = setInterval(function () {
+    timerInterval = setInterval(function () {
         secondsLeft--;
         timerStarts.textContent = "Time: " + secondsLeft;
 
@@ -50,29 +50,32 @@ function showTheQuestions() {
 function showTheHighScoresNameInput() {
     showHighScoresName.style.display = "block";
     showHighScore.textContent = "High Score: " + score;
+    clearInterval(timerInterval);
 
 }
 // Was trying to use object but unsuccessful - at previous commits
 let questionToWrite = [
-    "This_is_question_1",
-    "This_is_question_2",
-    "This_is_question_3",
-    "This_is_question_4",
-    "This_is_question_5",
-    "This_is_question_6",
-    "This_is_question_7"];
+    "Which team did Kobe play for?",
+    "How many championships did Kobe win?",
+    "Which team did Kobe score the most points against?",
+    "Which jersey number did Kobe wear?",
+    "On Kobe's final game, how many points did he score?",
+    "Against which team did Kobe pass MJ in all-time scoring list?",
+    "How many Gold medals did Kobe win?",
+    "Kobe's legacy is _______"];
 
 let answerToQuestions = [
-    ["answer", "ans", "ans", "ans"],
-    ["ans", "answer", "ans", "ans"],
-    ["ans", "ans", "answer", "ans"],
-    ["ans", "ans", "ans", "answer"],
-    ["ans", "ans", "answer", "ans"],
-    ["ans", "answer", "ans", "ans"],
-    ["answer", "ans", "ans", "ans"],
+    ["Lakers", "Hornets", "Sixers", "Celtics"],
+    ["3", "5", "2", "8"],
+    ["Mavericks", "Knicks", "Raptors", "Blazers"],
+    ["8", "24", "10", "All of the above"],
+    ["8", "24", "60", "81"],
+    ["Bulls", "Timberwolves", "Wizards", "Spurs"],
+    ["2", "3", "4", "5"], 
+    ["BlackMamba", "Vino", "Bean", "GirlDad"]
 ];
 // index of right answers 
-let rightAnswersIdx = [0, 1, 2, 3, 2, 1, 0];
+let rightAnswersIdx = [0, 1, 2, 3, 2, 1, 0, 3];
 let quest = document.querySelector("#question");
 
 let button0 = document.querySelector("#ans0");
@@ -115,8 +118,6 @@ button0.addEventListener("click", function (event) {
         secondsLeft = secondsLeft - 10;
     };
     index++
-    console.log(toggleRightWrong.textContent);
-    console.log(toggleRightWrong.style.visibility)
     writeQuestions();
 
 });
@@ -131,8 +132,6 @@ button1.addEventListener("click", function (event) {
         secondsLeft = secondsLeft - 10;
     };
     index++
-    console.log(toggleRightWrong.textContent);
-    console.log(toggleRightWrong.style.visibility)
     writeQuestions();
 });
 button2.addEventListener("click", function (event) {
@@ -146,8 +145,6 @@ button2.addEventListener("click", function (event) {
         secondsLeft = secondsLeft - 10;
     };
     index++
-    console.log(toggleRightWrong.textContent);
-    console.log(toggleRightWrong.style.visibility)
     writeQuestions();
 
 });
@@ -163,8 +160,6 @@ button3.addEventListener("click", function (event) {
 
     };
     index++
-    console.log(toggleRightWrong.textContent);
-    console.log(toggleRightWrong.style.visibility)
     writeQuestions();
 });
 
